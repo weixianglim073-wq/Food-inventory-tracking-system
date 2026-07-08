@@ -1,4 +1,4 @@
-# 🥫 Food Inventory Tracker
+# 🥫 Food Inventory Tracking System
 
 A simple Streamlit web application that helps users manage household food inventory, monitor expiry dates, and reduce food waste.
 
@@ -10,11 +10,11 @@ A simple Streamlit web application that helps users manage household food invent
 - ➕ Add new food items
 - 📷 Barcode scanner support (USB barcode scanners)
 - 🔍 Search inventory by food name
-- ⚠ View food expiring within 7 days
+- ⚠ View food items expiring within 7 days
 - ❌ View expired food items
 - 🗑 Delete food items
-- 📊 Dashboard showing:
-  - Total items
+- 📊 Dashboard displaying:
+  - Total inventory items
   - Expiring soon
   - Expired items
 
@@ -22,7 +22,7 @@ A simple Streamlit web application that helps users manage household food invent
 
 ## Technologies Used
 
-- Python
+- Python 3
 - Streamlit
 - Pandas
 
@@ -31,56 +31,65 @@ A simple Streamlit web application that helps users manage household food invent
 ## Project Structure
 
 ```
-FoodInventoryTracker/
+Food-inventory-tracking-system/
 │
 ├── app.py
 ├── requirements.txt
 ├── food_inventory.csv
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
 ---
 
 ## Installation
 
-### 1. Clone the repository
+### Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/FoodInventoryTracker.git
-cd FoodInventoryTracker
+git clone https://github.com/weixianglim073-wq/Food-inventory-tracking-system.git
 ```
 
-### 2. Install the required libraries
+### Navigate into the project
+
+```bash
+cd Food-inventory-tracking-system
+```
+
+### Install dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run the application
+### Run the application
 
 ```bash
 streamlit run app.py
 ```
 
+The application will automatically open in your browser.
+
 ---
 
-## Barcode Support
+## Barcode Scanner Support
 
 This application supports USB barcode scanners.
 
-USB barcode scanners function like a keyboard.
+Most barcode scanners work like a keyboard.
 
-Simply:
+Steps:
 
-1. Click inside the Barcode input box.
-2. Scan the product barcode.
-3. The barcode number will automatically appear.
-4. If the barcode exists in the built-in product database, the food name will be filled in automatically.
+1. Open the **Add Food** page.
+2. Click inside the Barcode textbox.
+3. Scan the barcode.
+4. If the barcode is recognised, the food name will be filled automatically.
+5. Otherwise, manually enter the food name.
 
-Current supported products include:
+### Built-in Products
 
 | Barcode | Product |
-|----------|---------|
+|---------|---------|
 |9556001123456|Gardenia Bread|
 |9556041600018|Farmhouse Fresh Milk|
 |9555678901234|Chicken Eggs|
@@ -88,46 +97,62 @@ Current supported products include:
 |9557210001000|Milo UHT|
 |8888196400017|Fresh Milk|
 
-Unknown barcodes can still be entered manually.
-
 ---
 
 ## Dashboard
 
-The dashboard displays:
+The dashboard provides an overview of your inventory, including:
 
-- Total number of inventory items
-- Number of items expiring within 7 days
-- Number of expired items
-- Complete inventory table sorted by expiry date
+- Total number of food items
+- Items expiring within the next 7 days
+- Expired food items
+- Complete inventory sorted by expiry date
 
 ---
 
 ## Purpose
 
-This project was developed as a simple student project to demonstrate how technology can help households reduce food waste and improve food inventory management.
+Food waste is a growing concern in Singapore.
 
-The system allows users to monitor food expiry dates and encourages better food consumption planning.
+This project demonstrates how a simple digital inventory system can help households:
+
+- Keep track of food quantities
+- Monitor expiry dates
+- Reduce unnecessary food waste
+- Encourage better food management
+
+The application was developed as a student project using Streamlit and Python.
 
 ---
 
 ## Future Improvements
 
-Possible future enhancements include:
+Some planned enhancements include:
 
-- Barcode lookup using an online database
+- Camera barcode scanning using a phone
 - QR code support
-- Camera barcode scanning using a mobile phone
-- Edit existing inventory items
-- Email expiry reminders
+- Product lookup using Open Food Facts API
+- Edit inventory items
 - Food category filtering
+- Email expiry reminders
 - Export inventory to Excel
-- User login system
-- Cloud database support
-- Mobile-friendly interface
+- Cloud database
+- User accounts
+- Better dashboard visualisations
+- Mobile responsive interface
+
+---
+
+## Repository
+
+GitHub Repository:
+
+https://github.com/weixianglim073-wq/Food-inventory-tracking-system
 
 ---
 
 ## Author
 
-Developed as a student Streamlit project for learning Python, data management, and food inventory tracking.
+Developed by **Wei Xiang Lim**
+
+Student project created using Python, Streamlit and Pandas.
